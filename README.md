@@ -1,3 +1,5 @@
+> This repository is a fork of https://github.com/quantumlib/Stim/tree/main/glue/lattice_surgery.
+
 # Lattice Surgery Subroutine Synthesizer (LaSsynth)
 A lattice surgery subroutine (LaS) is a confined volume with a set of ports.
 Within this volume, lattice surgery merges and splits are performed.
