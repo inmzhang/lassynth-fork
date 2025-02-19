@@ -338,6 +338,7 @@ class LatticeSurgerySynthesizer:
         print_detail: bool = False,
         dimacs_file_name: Optional[str] = None,
         sat_log_file_name: Optional[str] = None,
+        color_ij: bool = True,
     ) -> Optional[LatticeSurgerySolution]:
         """solve an LaS synthesis problem.
 
@@ -367,6 +368,7 @@ class LatticeSurgerySynthesizer:
             input_dict=specification,
             given_arrs=given_arrs,
             given_vals=given_vals,
+            color_ij=color_ij,
         )
         if print_detail:
             print(f"Adding constraints time: {time.time() - start_time}")
@@ -397,6 +399,7 @@ class LatticeSurgerySynthesizer:
         print_detail: bool = False,
         dimacs_file_name_prefix: Optional[str] = None,
         sat_log_file_name_prefix: Optional[str] = None,
+        color_ij: bool = True,
     ) -> LatticeSurgerySolution:
         """find the optimal solution in terms of depth/height of the LaS.
 
@@ -449,6 +452,7 @@ class LatticeSurgerySynthesizer:
                 f"_d={depth}" if dimacs_file_name_prefix else None,
                 sat_log_file_name=sat_log_file_name_prefix +
                 f"_d={depth}" if sat_log_file_name_prefix else None,
+                color_ij=color_ij,
             )
             if result is None:
                 checked_depth[str(depth)] = "UNSAT"
@@ -477,6 +481,7 @@ class LatticeSurgerySynthesizer:
         print_detail: bool = False,
         dimacs_file_name_prefix: Optional[str] = None,
         sat_log_file_name_prefix: Optional[str] = None,
+        color_ij: bool = True,
     ) -> Optional[LatticeSurgerySolution]:
         """check if the problem is satisfiable given a port permutation.
 
@@ -528,6 +533,7 @@ class LatticeSurgerySynthesizer:
             sat_log_file_name=sat_log_file_name_prefix + "_" +
             perm.__repr__().replace(" ", "")
             if sat_log_file_name_prefix else None,
+            color_ij=color_ij,
         )
         print(f"{perm}: {'SAT' if result else 'UNSAT'}")
         return result
