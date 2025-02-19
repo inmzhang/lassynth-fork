@@ -36,4 +36,4 @@ See the [demo notebook in the docs directory](docs/demo.ipynb)
 	year = {2024},
     url = {http://arxiv.org/abs/2404.18369},
 }
-```# lassynth-fork
+```
