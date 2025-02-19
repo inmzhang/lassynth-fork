@@ -1,4 +1,6 @@
 > This repository is a fork of https://github.com/quantumlib/Stim/tree/main/glue/lattice_surgery.
+>
+> The only change is that the `color_ij` argument is exposed for `solve` in this fork.
 
 # Lattice Surgery Subroutine Synthesizer (LaSsynth)
 A lattice surgery subroutine (LaS) is a confined volume with a set of ports.
